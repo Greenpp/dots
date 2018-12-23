@@ -7,7 +7,7 @@
 
 #PS
 PS1='\[\e[32;1m\][\[\e[31;1m\]$(is_sudo)\[\e[32;1m\]\u \[\e[34;1m\]\w\[\e[32;1m\]\[\e[35;1m\]$(git_branch)\[\e[32;1m\]]\n\[\e[32;1m\]>\[\e[00m\] '
-PS2='\[\e[32;1m\]> '
+PS2='\[\e[32;1m\]>\[\e[00m\] '
 
 #aliases
 alias ls='ls -lh --color=auto'
