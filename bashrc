@@ -11,6 +11,7 @@ PS2='\[\e[32;1m\]>\[\e[00m\] '
 
 #aliases
 alias ls='ls -lh --color=auto'
+alias chrome='google-chrome-stable'
 
 #PATH
 export PATH=~/bin:$PATH
