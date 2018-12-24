@@ -18,8 +18,4 @@ export PATH=~/bin:$PATH
 #completion
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 
-#autostart xserver on login
-if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-	exec startx
-fi
 
