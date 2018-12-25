@@ -1,3 +1,11 @@
+#      _                 _            
+#   __| |_   _ _ __  ___| |_ _ __ ___ 
+#  / _` | | | | '_ \/ __| __| '__/ __|
+# | (_| | |_| | | | \__ \ |_| | | (__ 
+#  \__,_|\__,_|_| |_|___/\__|_|  \___|
+#
+
+
 [global]
     # Display for notifications
     monitor = 0
@@ -203,4 +211,6 @@
     frame_color = "#ff0000"
     timeout = 0
     #icon = /path/to/icon
+
+# vim: ft=cfg
 
