@@ -20,20 +20,39 @@ URxvt*depth: 32
 # COLORS
 URxvt*foreground: #c6c6c6
 URxvt*background: [90]#0f0f0f
+
+# Normal
+# Bright
+
+# Black
 URxvt*color0:  #282a2e
-URxvt*color1:  #ca0000
-URxvt*color2:  #037700
-URxvt*color3:  #c85709
-URxvt*color4:  #005499
-URxvt*color5:  #6b1588
-URxvt*color6:  #00a590
-URxvt*color7:  #717b84
 URxvt*color8:  #282a2e
+
+# Red
+URxvt*color1:  #ca0000
 URxvt*color9:  #ca0000
+
+# Yellow
+URxvt*color2:  #037700
 URxvt*color10: #037700
+
+# Green
+URxvt*color3:  #c85709
 URxvt*color11: #c85709
+
+# Blue
+URxvt*color4:  #005499
 URxvt*color12: #005499
+
+# Magenta
+URxvt*color5:  #6b1588
 URxvt*color13: #6b1588
+
+# Cyan
+URxvt*color6:  #00a590
 URxvt*color14: #00a590
+
+# White
+URxvt*color7:  #717b84
 URxvt*color15: #717b84
 
