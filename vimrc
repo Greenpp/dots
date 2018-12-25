@@ -13,6 +13,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'chrisbra/Colorizer'
 
 call vundle#end()
 filetype plugin indent on
