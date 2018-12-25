@@ -19,6 +19,9 @@ xrandr --dpi 96
 # compositor for true transparency
 compton -b
 
+# notifications server
+dunst &
+
 # i3
 exec i3
 
