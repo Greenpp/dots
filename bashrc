@@ -21,5 +21,5 @@ alias chrome='google-chrome-stable'
 export PATH=~/bin:$PATH
 
 # completion (working better without it ?)
-# [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
+[ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 
