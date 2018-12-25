@@ -1,7 +1,23 @@
+# __  __                                            
+# \ \/ /_ __ ___  ___  ___  _   _ _ __ ___ ___  ___ 
+#  \  /| '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+#  /  \| | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+# /_/\_\_|  \___||___/\___/ \__,_|_|  \___\___||___/
+#
+
+
+# URXVT
+
+# scrollbar
 URxvt*scrollBar: false
 
+# font
+URxvt*font: xft:Source Code Pro:size=12:antialias=true
+
+# transparency
 URxvt*depth: 32
 
+# COLORS
 URxvt*foreground: #c6c6c6
 URxvt*background: [90]#0f0f0f
 URxvt*color0:  #282a2e
@@ -20,4 +36,4 @@ URxvt*color12: #005499
 URxvt*color13: #6b1588
 URxvt*color14: #00a590
 URxvt*color15: #717b84
-URxvt*font: xft:Source Code Pro:size=12:antialias=true
+
