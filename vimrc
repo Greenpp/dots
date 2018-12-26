@@ -12,8 +12,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+
+" Completion
 Plugin 'Valloric/YouCompleteMe'
+
+" Colors
 Plugin 'chrisbra/Colorizer'
+Plugin 'KabbAmine/vCoolor.vim'
 
 call vundle#end()
 filetype plugin indent on
