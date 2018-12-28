@@ -169,4 +169,7 @@ default_border pixel
 bar {
     status_command i3blocks
 	position top
+    colors {
+        background #525b5b
+    }
 }
