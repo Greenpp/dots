@@ -9,7 +9,11 @@
 # global settings
 command=~/bin/i3blocks/$BLOCK_NAME
 separator_block_width=15
-markup=none
+
+# volume
+[volume]
+interval=once
+signal=8
 
 # battery
 [battery]
