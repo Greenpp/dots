@@ -22,6 +22,9 @@ compton -b
 # notifications server
 dunst &
 
+# restore sound config
+alsactl -f ~/.alsa_state restore &
+
 # i3
 exec i3
 
