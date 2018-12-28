@@ -46,3 +46,11 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
+" status bar
+set laststatus=2
+set showmode
+set ruler
+
+" formatting
+set autoindent
+
