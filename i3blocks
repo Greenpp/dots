@@ -10,6 +10,11 @@
 command=~/scripts/i3blocks/$BLOCK_NAME
 separator_block_width=15
 
+# mic
+[microphone]
+interval=once
+signal=9
+
 # volume
 [volume]
 interval=once

@@ -151,6 +151,9 @@ bindcode 121 exec --no-startup-id ~/scripts/i3blocks/volume_un_mute
 bindcode 122 exec --no-startup-id ~/scripts/i3blocks/change_volume -
 bindcode 123 exec --no-startup-id ~/scripts/i3blocks/change_volume +
 
+# mic keys
+bindcode 198 exec --no-startup-id ~/scripts/i3blocks/microphone_un_mute
+
 # gaps size
 gaps inner 5
 gaps outer 0
