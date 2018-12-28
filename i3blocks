@@ -7,7 +7,7 @@
 
 
 # global settings
-command=~/bin/i3blocks/$BLOCK_NAME
+command=~/scripts/i3blocks/$BLOCK_NAME
 separator_block_width=15
 
 # volume

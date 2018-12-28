@@ -147,9 +147,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # volume keys
-bindcode 122 exec --no-startup-id ~/bin/i3blocks/change_volume -
-bindcode 123 exec --no-startup-id ~/bin/i3blocks/change_volume +
-bindcode 121 exec --no-startup-id ~/bin/i3blocks/volume_un_mute
+bindcode 121 exec --no-startup-id ~/scripts/i3blocks/volume_un_mute
+bindcode 122 exec --no-startup-id ~/scripts/i3blocks/change_volume -
+bindcode 123 exec --no-startup-id ~/scripts/i3blocks/change_volume +
 
 # gaps size
 gaps inner 5
