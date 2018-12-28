@@ -16,13 +16,13 @@ font pango:Source Code Pro 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu
-bindsym $mod+d exec dmenu_run -fn 'Source Code Pro-13'
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Source Code Pro-13'
 
 # change focus
 bindsym $mod+h focus left
@@ -117,7 +117,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Do you really want to exit i3?' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -145,6 +145,11 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+# volume keys
+bindcode 122 exec --no-startup-id ~/bin/i3blocks/change_volume -
+bindcode 123 exec --no-startup-id ~/bin/i3blocks/change_volume +
+bindcode 121 exec --no-startup-id ~/bin/i3blocks/volume_un_mute
 
 # gaps size
 gaps inner 5
