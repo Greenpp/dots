@@ -38,7 +38,11 @@ set splitbelow
 set splitright
 
 " theme
-colo desert
+colo gruvbox
+" dark version
+set background=dark
+" background opacity
+hi Normal guibg=NONE ctermbg=NONE
 
 " tab configuration
 set tabstop=4
