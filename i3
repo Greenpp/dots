@@ -5,7 +5,6 @@
 # |_|____/ 
 #
 
-
 # mod key
 set $mod Mod4
 
@@ -78,8 +77,8 @@ bindsym $mod+a focus parent
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
+set $ws4 "🌐"
+set $ws5 "📨"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -127,10 +126,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -158,21 +157,31 @@ bindcode 198 exec --no-startup-id ~/scripts/i3blocks/microphone_un_mute
 bindcode 232 exec --no-startup-id ~/scripts/i3blocks/change_brightness -
 bindcode 233 exec --no-startup-id ~/scripts/i3blocks/change_brightness +
 
-# gaps size
-gaps inner 5
-gaps outer 0
+# gaps
+gaps inner 6
+gaps outer 1
 
 # borders
-default_border pixel
+default_border none
+
 
 # status bar
 bar {
     status_command i3blocks
-	position top
+	mode dock
+    position top
+    font pango:Noto Sans 12
     colors {
-        background          #333333
-        focused_workspace   #0253d6 #466db5 #f6f6f6
-        inactive_workspace  #0253d6 #7a8291 #f6f6f6
+        background           #0f0f0f
+        statusline           #c6c6c6
+        focused_workspace    #005499    #005499     #c6c6c6
+        active_workspace     #005499    #005499     #c6c6c6
+        urgent_workspace     #ca0000    #ca0000     #c6c6c6
+        inactive_workspace   #005499    #282a2e     #c6c6c6
     }
-    font pango:Noto Sans 11
 }
+
+# workspace distribution
+for_window [class="Thunderbird"] move to workspace $ws5; workspace $ws5
+for_window [class="Google-chrome"] move to workspace $ws4; workspace $ws4
+
