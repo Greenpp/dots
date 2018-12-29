@@ -74,12 +74,12 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # workspaces
-set $ws1 "1"
-set $ws2 "2"
+set $ws1 "1:🌐"
+set $ws2 "2:>_"
 set $ws3 "3"
-set $ws4 "4:🌐"
+set $ws4 "4"
 set $ws5 "5:📨"
-set $ws6 "6"
+set $ws6 "6:🖌"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
@@ -182,6 +182,11 @@ bar {
 }
 
 # workspace distribution
+# Thunderbird
 for_window [class="Thunderbird"] move to workspace $ws5; workspace $ws5
-for_window [class="Google-chrome"] move to workspace $ws4; workspace $ws4
+# Chrome
+for_window [class="Google-chrome"] move to workspace $ws1; workspace $ws1
+
+# start on 2nd workspace
+exec --no-startup-id i3-msg workspace $ws2
 
