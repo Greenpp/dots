@@ -12,9 +12,7 @@
 URxvt*scrollBar: false
 
 ! font
-#define font1       SauceCodePro\ Nerd\ Font\ Mono
-#define font2       Source\ Code\ Pro
-#define font3       Noto\ Color\ Emoji
+#define font1       Source Code Pro
 
 URxvt*font: xft:font1:size=13
 

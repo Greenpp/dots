@@ -10,7 +10,7 @@
 set $mod Mod4
 
 # font
-font pango:SauceCodePro Nerd Font 11
+font pango:Source Code Pro 11
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -22,7 +22,7 @@ bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu
-bindsym $mod+d exec --no-startup-id dmenu_run -fn 'SauceCodePro Nerd Font-13'
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Source Code Pro-13'
 
 # change focus
 bindsym $mod+h focus left
