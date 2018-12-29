@@ -1,58 +1,61 @@
-# __  __                                            
-# \ \/ /_ __ ___  ___  ___  _   _ _ __ ___ ___  ___ 
-#  \  /| '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
-#  /  \| | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
-# /_/\_\_|  \___||___/\___/ \__,_|_|  \___\___||___/
-#
+! __  __                                            
+! \ \/ /_ __ ___  ___  ___  _   _ _ __ ___ ___  ___ 
+!  \  /| '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+!  /  \| | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+! /_/\_\_|  \___||___/\___/ \__,_|_|  \___\___||___/
+!
 
 
-# URXVT
+! URXVT
 
-# scrollbar
+! scrollbar
 URxvt*scrollBar: false
 
-# font
-URxvt*font: xft:Source Code Pro:size=12:antialias=true
+! font
+#define font1       SauceCodePro Nerd Font
+#define font2       Inconsolata Nerd Font Mono
 
-# transparency
+URxvt*font: xft:font1:size=12:antialias=true:minspace=false
+
+! transparency
 URxvt*depth: 32
 
-# COLORS
+! COLORS
 URxvt*foreground: #c6c6c6
 URxvt*background: [90]#0f0f0f
 
-# Normal
-# Bright
+! Normal
+! Bright
 
-# Black
+! Black
 URxvt*color0:  #282a2e
 URxvt*color8:  #282a2e
 
-# Red
+! Red
 URxvt*color1:  #ca0000
 URxvt*color9:  #ca0000
 
-# Yellow
+! Yellow
 URxvt*color2:  #037700
 URxvt*color10: #037700
 
-# Green
+! Green
 URxvt*color3:  #c85709
 URxvt*color11: #c85709
 
-# Blue
+! Blue
 URxvt*color4:  #005499
 URxvt*color12: #005499
 
-# Magenta
+! Magenta
 URxvt*color5:  #6b1588
 URxvt*color13: #6b1588
 
-# Cyan
+! Cyan
 URxvt*color6:  #00a590
 URxvt*color14: #00a590
 
-# White
+! White
 URxvt*color7:  #717b84
 URxvt*color15: #717b84
 
