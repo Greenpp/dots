@@ -77,8 +77,8 @@ bindsym $mod+a focus parent
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
-set $ws4 "🌐"
-set $ws5 "📨"
+set $ws4 "4:🌐"
+set $ws5 "5:📨"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -164,11 +164,11 @@ gaps outer 1
 # borders
 default_border none
 
-
 # status bar
 bar {
     status_command i3blocks
-	mode dock
+	strip_workspace_numbers yes
+    mode dock
     position top
     font pango:Noto Sans 12
     colors {
