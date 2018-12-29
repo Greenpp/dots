@@ -170,6 +170,9 @@ bar {
     status_command i3blocks
 	position top
     colors {
-        background #333333
+        background          #333333
+        focused_workspace   #0253d6 #466db5 #f6f6f6
+        inactive_workspace  #0253d6 #7a8291 #f6f6f6
     }
+    font pango:Noto Sans 11
 }
