@@ -15,7 +15,7 @@
     follow = mouse
 
     # [{width}]x{height}[+/-{x}+/-{y}]
-    geometry = "300x10-30+25"
+    geometry = "300x10-30+30"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -59,7 +59,7 @@
 
     ### Text ###
 
-    font = pango:Source Code Pro 9
+    font = pango:Source Code Pro 11
 
     # The spacing between lines
     line_height = 0
