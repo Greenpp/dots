@@ -12,10 +12,14 @@
 URxvt*scrollBar: false
 
 ! font
-#define font1       SauceCodePro Nerd Font
-#define font2       Inconsolata Nerd Font Mono
+#define font1       SauceCodePro\ Nerd\ Font\ Mono
+#define font2       Inconsolata\ Nerd\ Font\ Mono
+#define font3       DejaVuSansMono\ Nerd\ Font\ Mono
+#define font4       Source\ Code\ Pro
+#define font5       Noto\ Color\ Emoji
 
-URxvt*font: xft:font1:size=12:antialias=true:minspace=false
+URxvt*font: xft:font1:size=12:antialias=true,xft:font5:size=12:antialias=true
+
 
 ! transparency
 URxvt*depth: 32
