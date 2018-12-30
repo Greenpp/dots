@@ -15,15 +15,11 @@ URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/xdg-open
 URxvt.url-select.underline: true
 
-
-
 ! scrollbar
 URxvt*scrollBar: false
 
 ! font
-#define font1       Source Code Pro
-
-URxvt*font: xft:font1:size=13
+URxvt*font: xft:monospace:size=13
 
 ! transparency
 URxvt*depth: 32

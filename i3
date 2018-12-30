@@ -9,7 +9,7 @@
 set $mod Mod4
 
 # font
-font pango:Source Code Pro 11
+font pango:SauceCodePro Nerd Font 11
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -21,7 +21,7 @@ bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu
-bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Source Code Pro-13'
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'monospace-15'
 
 # change focus
 bindsym $mod+h focus left
@@ -170,7 +170,7 @@ bar {
 	strip_workspace_numbers yes
     mode dock
     position top
-    font pango:Noto Sans 12
+    font pango:SauceCodePro Nerd Font 13
     colors {
         background           #0f0f0f
         statusline           #c6c6c6
