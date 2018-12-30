@@ -9,11 +9,15 @@
 ! URXVT
 
 ! Scripts
+URxvt.perl-ext-common: resize-font,keyboard-select
 URxvt.perl-ext: default,url-select
 ! urls
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/xdg-open
 URxvt.url-select.underline: true
+
+URxvt.keysym.M-s: perl:keyboard-select:activate
+URxvt.keyboard-select.clipboard: true
 
 ! scrollbar
 URxvt*scrollBar: false
