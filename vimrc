@@ -30,6 +30,10 @@ let g:ycm_global_ycm_extra_conf = '/home/jakub/.vim/bundle/YouCompleteMe/third_p
 " selection with enter
 let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
 
+" Scripts
+" remove trailing whitespaces on save
+:autocmd BufWrite * :%s/\s\+$//e
+
 " syntax
 syntax on
 
