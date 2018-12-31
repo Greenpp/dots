@@ -172,12 +172,12 @@ bar {
     position top
     font pango:SauceCodePro Nerd Font 13
     colors {
-        background           #0f0f0f
-        statusline           #c6c6c6
-        focused_workspace    #005499    #005499     #c6c6c6
-        active_workspace     #005499    #005499     #c6c6c6
-        urgent_workspace     #ca0000    #ca0000     #c6c6c6
-        inactive_workspace   #005499    #282a2e     #c6c6c6
+        background           #1d1f21
+        statusline           #b4b7b4
+        focused_workspace    #005499    #005499     #b4b7b4
+        active_workspace     #005499    #005499     #b4b7b4
+        urgent_workspace     #cc342b    #cc342b     #b4b7b4
+        inactive_workspace   #005499    #1d1f21     #b4b7b4
     }
 }
 
