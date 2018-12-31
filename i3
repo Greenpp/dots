@@ -1,8 +1,8 @@
-#  _ _____ 
-# (_)___ / 
-# | | |_ \ 
+#  _ _____
+# (_)___ /
+# | | |_ \
 # | |___) |
-# |_|____/ 
+# |_|____/
 #
 
 # mod key
@@ -170,7 +170,7 @@ bar {
 	strip_workspace_numbers yes
     mode dock
     position top
-    font pango:SauceCodePro Nerd Font 13
+    font pango:DejaVu Sans 13
     colors {
         background           #1d1f21
         statusline           #b4b7b4
