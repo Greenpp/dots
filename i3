@@ -157,6 +157,9 @@ bindcode 198 exec --no-startup-id ~/scripts/i3blocks/microphone_un_mute
 bindcode 232 exec --no-startup-id ~/scripts/i3blocks/change_brightness -
 bindcode 233 exec --no-startup-id ~/scripts/i3blocks/change_brightness +
 
+# ss keys
+bindcode 107 exec --no-startup-id scrot
+
 # gaps
 gaps inner 6
 gaps outer 1
