@@ -9,7 +9,7 @@
 ! URXVT
 
 ! Scripts
-URxvt.perl-ext-common: resize-font,keyboard-select
+URxvt.perl-ext-common: resize-font,keyboard-select,selection-to-clipboard,resize-font
 URxvt.perl-ext: default,url-select
 ! urls
 URxvt.keysym.M-u: perl:url-select:select_next
@@ -18,6 +18,9 @@ URxvt.url-select.underline: true
 
 URxvt.keysym.M-s: perl:keyboard-select:activate
 URxvt.keyboard-select.clipboard: true
+
+URxvt.keysym.C-KP_Add: resize-font:bigger
+URxvt.keysym.C-KP_Subtract: resize-font:smaller
 
 ! scrollbar
 URxvt*scrollBar: false
