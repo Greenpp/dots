@@ -1,7 +1,7 @@
-"        _                    
-" __   _(_)_ __ ___  _ __ ___ 
+"        _
+" __   _(_)_ __ ___  _ __ ___
 " \ \ / / | '_ ` _ \| '__/ __|
-"  \ V /| | | | | | | | | (__ 
+"  \ V /| | | | | | | | | (__
 "   \_/ |_|_| |_| |_|_|  \___|
 "
 
@@ -29,6 +29,11 @@ filetype plugin indent on
 let g:ycm_global_ycm_extra_conf = '/home/jakub/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
 " selection with enter
 let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+" interpreter
+let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+" preview
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 " Scripts
 " remove trailing whitespaces on save
