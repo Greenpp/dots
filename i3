@@ -163,6 +163,7 @@ bindcode 233 exec --no-startup-id ~/scripts/i3blocks/change_brightness +
 
 # ss keys
 bindcode 107 exec --no-startup-id scrot
+bindcode --release Shift+107 exec --no-startup-id scrot -s
 
 # gaps
 gaps inner 6
