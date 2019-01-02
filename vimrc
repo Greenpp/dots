@@ -77,3 +77,15 @@ set ruler
 " formatting
 set autoindent
 
+" search highlight
+set hlsearch
+" reset
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+" searchin with #
+nnoremap # mp*`p<Bar>:echo<CR>
+
+" search selected in visual mode with #
+vnoremap # ymp/\V<C-r>=escape(@",'/\')<CR><CR>`p<Bar>:echo<CR>
+
+
