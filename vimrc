@@ -20,6 +20,9 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'chrisbra/Colorizer'
 Plugin 'KabbAmine/vCoolor.vim'
 
+" File explorer
+Plugin 'scrooloose/nerdtree'
+
 call vundle#end()
 filetype plugin indent on
 " VundleEnd
@@ -36,6 +39,10 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 " enable for all files
 let g:ycm_filetype_blacklist = {}
+
+" Nerdtree
+map <C-n> :NERDTreeToggle<CR><Bar>:echo<CR>
+let g:NERDTreeQuitOnOpen = 1
 
 " Scripts
 " remove trailing whitespaces on save
