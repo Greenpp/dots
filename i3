@@ -15,7 +15,7 @@ font pango:SauceCodePro Nerd Font 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id ~/scripts/i3/terminal_in_place
 
 # kill focused window
 bindsym $mod+Shift+q kill
