@@ -149,6 +149,9 @@ bindsym $mod+r mode "resize"
 # browser
 bindsym $mod+b exec --no-startup-id google-chrome-stable
 
+# email
+bindsym $mod+m exec --no-startup-id thunderbird
+
 # volume keys
 bindcode 121 exec --no-startup-id ~/scripts/i3blocks/volume_un_mute
 bindcode 122 exec --no-startup-id ~/scripts/i3blocks/change_volume -
