@@ -64,6 +64,9 @@ autocmd BufNewFile,BufRead * if matchstr(execute('set syntax?'), '=$') != '' | s
 " syntax
 syntax on
 
+" spellcheck
+autocmd FileType gitcommit setlocal spell
+
 " lines numeration
 set number relativenumber
 
