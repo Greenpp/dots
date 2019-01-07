@@ -181,7 +181,7 @@ bar {
 	strip_workspace_numbers yes
     mode dock
     position top
-    font pango:SauceCodePro Nerd Font 13
+    font pango:SauceCodePro Nerd Font 12
     colors {
         background           #1d1f21
         statusline           #b4b7b4
