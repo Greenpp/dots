@@ -124,6 +124,7 @@ let g:airline_symbols.linenr = ''
 " formatting
 set autoindent
 filetype indent on
+set linebreak
 
 " search highlight
 set hlsearch
