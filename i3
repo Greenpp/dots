@@ -175,6 +175,9 @@ gaps outer 1
 # borders
 default_border none
 
+hide_edge_borders smart
+for_window [class="^.*"] border pixel 1
+
 # status bar
 bar {
     status_command i3blocks
