@@ -140,3 +140,5 @@ vnoremap # ymp/\V<C-r>=escape(@",'/\')<CR><CR>`p<Bar>:echo<CR>
 " search while typing
 set incsearch
 
+" resize splits after terminal resize
+autocmd VimResized * wincmd =
