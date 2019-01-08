@@ -137,4 +137,6 @@ nnoremap # mp*`p<Bar>:echo<CR>
 " search selected in visual mode with #
 vnoremap # ymp/\V<C-r>=escape(@",'/\')<CR><CR>`p<Bar>:echo<CR>
 
+" search while typing
+set incsearch
 
