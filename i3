@@ -176,7 +176,7 @@ gaps outer 1
 default_border none
 
 hide_edge_borders smart
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 
 # status bar
 bar {
