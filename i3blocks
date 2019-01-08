@@ -1,5 +1,5 @@
-#  _ _____ _     _            _        
-# (_)___ /| |__ | | ___   ___| | _____ 
+#  _ _____ _     _            _
+# (_)___ /| |__ | | ___   ___| | _____
 # | | |_ \| '_ \| |/ _ \ / __| |/ / __|
 # | |___) | |_) | | (_) | (__|   <\__ \
 # |_|____/|_.__/|_|\___/ \___|_|\_\___/
@@ -9,6 +9,10 @@
 # global settings
 command=~/scripts/i3blocks/$BLOCK_NAME
 separator_block_width=15
+
+# wifi ssid
+[ssid]
+interval=10
 
 # mic
 [microphone]
