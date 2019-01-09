@@ -20,6 +20,12 @@ alias chrome='google-chrome-stable'
 # PATH
 export PATH=~/bin:$PATH
 
+# Defaults
+export EDITOR=/usr/bin/vim
+export PAGER=/usr/bin/less
+export BROWSER=/usr/bin/google-chrome-stable
+export VISUAL=/usr/bin/vim
+
 # completion (working better without it ?)
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 
