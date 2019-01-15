@@ -142,3 +142,7 @@ set incsearch
 
 " resize splits after terminal resize
 autocmd VimResized * wincmd =
+
+" copy to clipboard
+set clipboard=unnamedplus
+
