@@ -78,6 +78,7 @@ set splitright
 colo gruvbox
 " dark version
 set background=dark
+let g:gruvbox_contrast_dark='hard'
 " background opacity
 hi Normal guibg=NONE ctermbg=NONE
 
