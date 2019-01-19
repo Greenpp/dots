@@ -9,7 +9,7 @@ set encoding=utf-8
 " Vundle
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
+set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
@@ -17,9 +17,18 @@ Plugin 'VundleVim/Vundle.vim'
 " Completion
 Plugin 'Valloric/YouCompleteMe'
 
+" Language Client
+Plugin 'w0rp/ale'
+
+" Start Page
+Plugin 'mhinz/vim-startify'
+
+" Indent Marker
+Plugin 'Yggdroot/indentLine'
+
 " Colors
-Plugin 'chrisbra/Colorizer'
-Plugin 'KabbAmine/vCoolor.vim'
+" Plugin 'chrisbra/Colorizer'
+" Plugin 'KabbAmine/vCoolor.vim'
 
 " Bar
 Plugin 'vim-airline/vim-airline'
@@ -35,18 +44,35 @@ call vundle#end()
 filetype plugin indent on
 " VundleEnd
 
-" YouCompleteMe
-" config
-let g:ycm_global_ycm_extra_conf = '/home/jakub/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
-" selection with enter
-let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
-" interpreter
-let g:ycm_path_to_python_interpreter = '/usr/bin/python'
-" preview
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-" enable for all files
-let g:ycm_filetype_blacklist = {}
+ " YouCompleteMe
+ " config
+ let g:ycm_global_ycm_extra_conf = '/home/jakub/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
+ " selection with enter
+ let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+ " interpreter
+ let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+ " preview
+ let g:ycm_autoclose_preview_window_after_insertion = 1
+ let g:ycm_autoclose_preview_window_after_completion = 1
+ " enable for all files
+ let g:ycm_filetype_blacklist = {}
+
+" ALE
+let g:ale_sign_column_always = 1
+let g:ale_fixers = {
+\   'css': ['prettier'],
+\   'html': ['prettier'],
+\   'javascript': ['prettier'],
+\   'json': ['prettier'],
+\   'markdown': ['prettier'],
+\   'python': ['yapf', 'isort'],
+\   'latex': ['chktex', 'lacheck']
+\}
+
+let g:ale_linters = {
+\   'python': ['pyls', 'isort']
+\}
+
 
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR><Bar>:echo<CR>
@@ -126,6 +152,10 @@ let g:airline_symbols.linenr = ''
 set autoindent
 filetype indent on
 set linebreak
+
+" Indent mark character
+let g:indentLine_char = '¦'
+let g:indentLine_color_term = 239
 
 " search highlight
 set hlsearch
