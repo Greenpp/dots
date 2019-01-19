@@ -17,6 +17,9 @@ Plugin 'VundleVim/Vundle.vim'
 " Completion
 Plugin 'Valloric/YouCompleteMe'
 
+" LaTeX
+Plugin 'lervag/vimtex'
+
 " Language Client
 Plugin 'w0rp/ale'
 
@@ -44,18 +47,23 @@ call vundle#end()
 filetype plugin indent on
 " VundleEnd
 
- " YouCompleteMe
- " config
- let g:ycm_global_ycm_extra_conf = '/home/jakub/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
- " selection with enter
- let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
- " interpreter
- let g:ycm_path_to_python_interpreter = '/usr/bin/python'
- " preview
- let g:ycm_autoclose_preview_window_after_insertion = 1
- let g:ycm_autoclose_preview_window_after_completion = 1
- " enable for all files
- let g:ycm_filetype_blacklist = {}
+" YouCompleteMe
+" config
+let g:ycm_global_ycm_extra_conf = '/home/jakub/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
+" selection with enter
+let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+" interpreter
+let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+" preview
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+" enable for all files
+let g:ycm_filetype_blacklist = {}
+" Vimtex integration
+if !exists('g:ycm_semantic_triggers')
+    let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
 
 " ALE
 let g:ale_sign_column_always = 1
