@@ -26,9 +26,6 @@ Plugin 'w0rp/ale'
 " Start Page
 Plugin 'mhinz/vim-startify'
 
-" Indent Marker
-Plugin 'Yggdroot/indentLine'
-
 " Colors
 " Plugin 'chrisbra/Colorizer'
 " Plugin 'KabbAmine/vCoolor.vim'
@@ -114,7 +111,7 @@ colo gruvbox
 set background=dark
 let g:gruvbox_contrast_dark='hard'
 " background opacity
-hi Normal guibg=NONE ctermbg=NONE
+" hi Normal guibg=NONE ctermbg=NONE
 
 " tab configuration
 set tabstop=4
@@ -160,10 +157,6 @@ let g:airline_symbols.linenr = ''
 set autoindent
 filetype indent on
 set linebreak
-
-" Indent mark character
-let g:indentLine_char = '¦'
-let g:indentLine_color_term = 239
 
 " search highlight
 set hlsearch
