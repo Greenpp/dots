@@ -178,3 +178,11 @@ autocmd VimResized * wincmd =
 " copy to clipboard
 set clipboard=unnamedplus
 
+" autoclose
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap (; ();
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
