@@ -101,6 +101,14 @@ autocmd FileType gitcommit setlocal spell
 " lines numeration
 set number relativenumber
 
+nnoremap : :set number norelativenumber<CR>:
+nnoremap / :set number norelativenumber<CR>/
+nnoremap ? :set number norelativenumber<CR>?
+au InsertEnter * set number relativenumber
+cnoremap <silent> <CR> <CR>:set number relativenumber<CR>
+cnoremap <silent> <Esc> <Esc>:set number relativenumber<CR>
+cnoremap <silent> <C-c> <C-c>:set number relativenumber<CR>
+
 " split position
 set splitbelow
 set splitright
@@ -180,9 +188,29 @@ set clipboard=unnamedplus
 
 " autoclose
 inoremap " ""<left>
+inoremap "<BS> <left><right>
+inoremap "<CR> "<CR>"<ESC>O
+inoremap "" ""
 inoremap ' ''<left>
+inoremap '<BS> <left><right>
+inoremap '<CR> '<CR>'<ESC>O
+inoremap '' ''
 inoremap ( ()<left>
+inoremap (<BS> <left><right>
+inoremap (<CR> (<CR>)<ESC>O
+inoremap () ()
 inoremap (; ();
 inoremap [ []<left>
+inoremap [<BS> <left><right>
+inoremap [<CR> [<CR>]<ESC>O
+inoremap [] []
 inoremap { {}<left>
+inoremap {<BS> <left><right>
 inoremap {<CR> {<CR>}<ESC>O
+inoremap {} {}
+
+" Cursor
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
+
