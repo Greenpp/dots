@@ -29,6 +29,8 @@ Plugin 'mhinz/vim-startify'
 " Colors
 " Plugin 'chrisbra/Colorizer'
 " Plugin 'KabbAmine/vCoolor.vim'
+Plugin 'ap/vim-css-color'
+Plugin 'blindFS/vim-colorpicker'
 
 " Bar
 Plugin 'vim-airline/vim-airline'
@@ -77,6 +79,8 @@ let g:ale_fixers = {
 let g:ale_linters = {
 \   'python': ['pyls', 'isort']
 \}
+let g:ale_lint_on_text_changed = 'never'
+nnoremap <C-l> :ALEFix<CR>
 
 
 " Nerdtree
@@ -102,8 +106,6 @@ autocmd FileType gitcommit setlocal spell
 set number relativenumber
 
 nnoremap : :set number norelativenumber<CR>:
-nnoremap / :set number norelativenumber<CR>/
-nnoremap ? :set number norelativenumber<CR>?
 au InsertEnter * set number relativenumber
 cnoremap <silent> <CR> <CR>:set number relativenumber<CR>
 cnoremap <silent> <Esc> <Esc>:set number relativenumber<CR>
@@ -165,6 +167,9 @@ let g:airline_symbols.linenr = ''
 set autoindent
 filetype indent on
 set linebreak
+
+nnoremap <Up> gk
+nnoremap <Down> gj
 
 " search highlight
 set hlsearch
