@@ -63,6 +63,8 @@ if !exists('g:ycm_semantic_triggers')
     let g:ycm_semantic_triggers = {}
 endif
 let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
+" Default keywords
+let g:ycm_seed_identifiers_with_syntax = 1
 
 " ALE
 let g:ale_sign_column_always = 1
@@ -200,6 +202,7 @@ inoremap ' ''<left>
 inoremap '<BS> <left><right>
 inoremap '<CR> '<CR>'<ESC>O
 inoremap '' ''
+inoremap ''' ''''''<left><left><left>
 inoremap ( ()<left>
 inoremap (<BS> <left><right>
 inoremap (<CR> (<CR>)<ESC>O
