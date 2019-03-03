@@ -76,7 +76,7 @@ bindsym $mod+a focus parent
 # workspaces
 set $ws1 "1:🌐"
 set $ws2 "2:>_"
-set $ws3 "3"
+set $ws3 "3:🐍"
 set $ws4 "4"
 set $ws5 "5:📨"
 set $ws6 "6:🖌"
