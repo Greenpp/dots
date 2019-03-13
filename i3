@@ -21,7 +21,7 @@ bindsym $mod+Return exec --no-startup-id ~/scripts/i3/terminal_in_place
 bindsym $mod+Shift+q kill
 
 # start dmenu
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id dmenu_run -i
 
 # change focus
 bindsym $mod+h focus left
