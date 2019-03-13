@@ -14,6 +14,11 @@ separator_block_width=15
 [ssid]
 interval=10
 
+# brightness
+[brightness]
+interval=once
+signal=11
+
 # mic
 [microphone]
 interval=once
