@@ -178,6 +178,9 @@ default_border none
 hide_edge_borders smart
 for_window [class="^.*"] border pixel 2
 
+# floating temrinal bar class
+for_window [class="^floating-term-bar"] floating enable
+
 # status bar
 bar {
     status_command i3blocks
