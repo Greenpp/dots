@@ -66,7 +66,7 @@ const int boxdraw = 1;
 const int boxdraw_bold = 1;
 
 /* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
-const int boxdraw_braille = 0;
+const int boxdraw_braille = 1;
 
 /*
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
@@ -100,14 +100,14 @@ float alpha = 0.75;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#000000",
-	"#d70000",
-	"#00af00",
-	"#ffd700",
-	"#005fff",
-	"#8700af",
-	"#00b7eb",
-	"#c5c8c6",
+	"#000000", // black
+	"#d70000", // red
+	"#00af00", // green
+	"#ffd700", // yellow
+	"#005fff", // blue
+	"#8700af", // purple
+	"#00b7eb", // aqua
+	"#c5c8c6", // gray
 
 	/* 8 bright colors */
 	"#969896",
