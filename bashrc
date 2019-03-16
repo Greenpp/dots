@@ -17,6 +17,7 @@ PS2='\[\e[32;1m\]>\[\e[00m\] '
 alias ls='ls -lh --color=auto'
 alias chrome='google-chrome-stable'
 alias ..='cd ..'
+alias cp='rsync -ah --info=progress2'
 
 # PATH
 export PATH=~/bin:$PATH
