@@ -22,6 +22,9 @@ alias cp='rsync -ah --info=progress2'
 # PATH
 export PATH=~/bin:$PATH
 
+# Colors
+eval "$(dircolors -b ~/.dircolors)"
+
 # Defaults
 export EDITOR=/usr/bin/vim
 export PAGER=/usr/bin/less
