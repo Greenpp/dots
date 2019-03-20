@@ -67,7 +67,7 @@ source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 HIST_STAMPS="dd.mm.yyyy"
 
 # plugins
-plugins=(git web-search)
+plugins=(git web-search colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,3 +89,5 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 alias ls='ls -lh --color=auto'
 alias chrome='google-chrome-stable'
 alias cp='rsync -ah --info=progress2'
+alias ytdl='youtube-dl'
+alias sudo='sudo '
