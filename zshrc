@@ -11,7 +11,7 @@ unsetopt autocd beep extendedglob
 bindkey -e
 
 # PATH
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/opt/cuda/bin:$PATH
 
 # oh-my-zsh
 export ZSH="/home/jakub/.oh-my-zsh"
