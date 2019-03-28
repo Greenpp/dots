@@ -17,7 +17,6 @@ export PATH=$HOME/bin:/usr/local/bin:/opt/cuda/bin:$PATH
 export ZSH="/home/jakub/.oh-my-zsh"
 
 # theme
-# ZSH_THEME="agnoster"
 
 # font
 POWERLEVEL9K_MODE='nerdfont-complete'
@@ -50,8 +49,7 @@ POWERLEVEL9K_SSH_FOREGROUND='003'
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="└─>"
 
-# powerlevel9k
-source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+ZSH_THEME=powerlevel10k/powerlevel10k
 
 # CASE_SENSITIVE="true"
 # HYPHEN_INSENSITIVE="true"
@@ -92,3 +90,4 @@ alias cp='rsync -ah --info=progress2'
 alias ytdl='youtube-dl'
 alias sudo='sudo '
 alias mp='ncmpcpp'
+alias clock='tty-clock -sc'
