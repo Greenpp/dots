@@ -42,6 +42,9 @@ Plugin 'tpope/vim-fugitive'
 " File explorer
 Plugin 'scrooloose/nerdtree'
 
+" Icons
+Plugin 'ryanoasis/vim-devicons'
+
 call vundle#end()
 filetype plugin indent on
 " VundleEnd
@@ -88,6 +91,7 @@ nnoremap <C-l> :ALEFix<CR>
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR><Bar>:echo<CR>
 let g:NERDTreeQuitOnOpen = 1
+let g:NERDTreeWinSize = 60
 
 " Scripts
 " remove trailing whitespaces on save
@@ -192,6 +196,9 @@ autocmd VimResized * wincmd =
 
 " copy to clipboard
 set clipboard=unnamedplus
+
+" command history
+set history=1000
 
 " autoclose
 inoremap " ""<left>
