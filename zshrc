@@ -76,7 +76,7 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 HIST_STAMPS="dd.mm.yyyy"
 
 # plugins
-plugins=(git web-search colored-man-pages)
+plugins=(git colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
