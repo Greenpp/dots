@@ -76,11 +76,30 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 HIST_STAMPS="dd.mm.yyyy"
 
 # plugins
-plugins=(git colored-man-pages)
+plugins=(git colored-man-pages fzf)
 
 source $ZSH/oh-my-zsh.sh
 
 export MANPATH="/usr/local/man:$MANPATH"
+
+# fzf
+export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git --color=always"
+export FZF_CTRL_T_COMMAND="fd . -d 2 --follow --hidden --exclude .git --color=always ./"
+export FZF_DEFAULT_OPTS="--ansi \
+--color=\
+fg:-1,\
+fg+:-1,\
+bg:-1,\
+bg+:0,\
+hl:3,\
+hl+:3,\
+info:3,\
+border:-1,\
+prompt:3,\
+pointer:3,\
+marker:3,\
+spinner:3,\
+header:-1"
 
 # Defaults
 export EDITOR=/usr/bin/vim
