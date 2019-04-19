@@ -84,7 +84,7 @@ export MANPATH="/usr/local/man:$MANPATH"
 
 # fzf
 export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git --color=always"
-export FZF_CTRL_T_COMMAND="fd . -d 2 --follow --hidden --exclude .git --color=always ./"
+export FZF_CTRL_T_COMMAND="fd . -d 1 --follow --hidden --exclude .git --color=always ./"
 export FZF_DEFAULT_OPTS="--ansi \
 --color=\
 fg:-1,\
