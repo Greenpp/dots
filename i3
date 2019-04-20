@@ -48,7 +48,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+p split h
+# bindsym $mod+p split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -151,6 +151,9 @@ bindsym $mod+b exec --no-startup-id google-chrome-stable
 
 # email
 bindsym $mod+m exec --no-startup-id thunderbird
+
+# plumber
+bindsym $mod+p exec --no-startup-id ~/scripts/i3/plumber
 
 # volume keys
 bindcode 121 exec --no-startup-id ~/scripts/i3blocks/volume_un_mute
