@@ -22,6 +22,9 @@ compton -b
 # notifications server
 dunst &
 
+# hide cursor
+unclutter &
+
 # restore sound config
 alsactl -f ~/.alsa_state restore &
 
