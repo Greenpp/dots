@@ -195,7 +195,7 @@ set incsearch
 autocmd VimResized * wincmd =
 
 " copy to clipboard
-set clipboard=unnamedplus
+set clipboard^=unnamedplus,unnamed
 
 " command history
 set history=1000
