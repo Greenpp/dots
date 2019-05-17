@@ -18,7 +18,7 @@ unsetopt autocd beep extendedglob
 bindkey -e
 
 # PATH
-export PATH=$HOME/bin:/usr/local/bin:/opt/cuda/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/opt/cuda/bin:$(ruby -e 'puts Gem.user_dir')/bin:$PATH
 
 # oh-my-zsh
 export ZSH="/home/jakub/.oh-my-zsh"
@@ -76,7 +76,7 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 HIST_STAMPS="dd.mm.yyyy"
 
 # plugins
-plugins=(git colored-man-pages fzf)
+plugins=(git colored-man-pages fzf heroku)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -125,3 +125,6 @@ alias ranger='ranger --choosedir=$HOME/.rangerdir; cd $(cat $HOME/.rangerdir)'
 alias r='ranger'
 alias v='vim'
 alias sc='systemctl'
+
+# travis gem
+[ -f /home/jakub/.travis/travis.sh ] && source /home/jakub/.travis/travis.sh
