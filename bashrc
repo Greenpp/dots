@@ -31,7 +31,7 @@ export PAGER=/usr/bin/less
 export BROWSER=/usr/bin/google-chrome-stable
 export VISUAL=/usr/bin/vim
 
-# completion (working better without it ?)
+# completion
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 
 # ssh-agent
@@ -41,3 +41,6 @@ fi
 if [[ ! "$SSH_AUTH_SOCK" ]]; then
     eval "$(<~/.ssh-agent-thing)" > /dev/null
 fi
+
+# added by travis gem
+[ -f /home/jakub/.travis/travis.sh ] && source /home/jakub/.travis/travis.sh
