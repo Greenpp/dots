@@ -31,6 +31,9 @@ alsactl -f ~/.alsa_state restore &
 # polish keymap
 setxkbmap pl
 
+# key bindings
+sxhkd &
+
 # i3
 exec i3
 

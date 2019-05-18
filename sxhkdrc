@@ -1,0 +1,40 @@
+# Terminal, in place
+super + Return
+    ~/scripts/i3/terminal_in_place
+
+# Ss
+{_,shift +} Print
+    sleep 0.2; scrot {_,-s}
+
+# Browser
+super + b
+    $BROWSER
+
+# Email
+super + m
+    thunderbird
+
+# Plumber
+super + p
+    ~/scripts/i3/plumber
+
+# Dmenu launcher
+super + d
+    dmenu_run -i
+
+# Volume
+XF86Audio{Lower,Raise}Volume
+    ~/scripts/i3blocks/change_volume {-,+}
+
+# Speaker (un)mute
+XF86AudioMute
+    ~/scripts/i3blocks/volume_un_mute
+
+# Mic (un)mute
+XF86AudioMicMute
+    ~/scripts/i3blocks/microphone_un_mute
+
+# Brightness
+XF86MonBrightness{Down,Up}
+    ~/scripts/i3blocks/change_brightness {-,+}
+

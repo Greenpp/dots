@@ -14,14 +14,8 @@ font pango:SauceCodePro Nerd Font 11
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec --no-startup-id ~/scripts/i3/terminal_in_place
-
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# start dmenu
-bindsym $mod+d exec --no-startup-id dmenu_run -i
 
 # change focus
 bindsym $mod+h focus left
@@ -144,32 +138,6 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-# custom apps
-# browser
-bindsym $mod+b exec --no-startup-id google-chrome-stable
-
-# email
-bindsym $mod+m exec --no-startup-id thunderbird
-
-# plumber
-bindsym $mod+p exec --no-startup-id ~/scripts/i3/plumber
-
-# volume keys
-bindcode 121 exec --no-startup-id ~/scripts/i3blocks/volume_un_mute
-bindcode 122 exec --no-startup-id ~/scripts/i3blocks/change_volume -
-bindcode 123 exec --no-startup-id ~/scripts/i3blocks/change_volume +
-
-# mic keys
-bindcode 198 exec --no-startup-id ~/scripts/i3blocks/microphone_un_mute
-
-# brightness keys
-bindcode 232 exec --no-startup-id ~/scripts/i3blocks/change_brightness -
-bindcode 233 exec --no-startup-id ~/scripts/i3blocks/change_brightness +
-
-# ss keys
-bindcode 107 exec --no-startup-id scrot
-bindcode --release Shift+107 exec --no-startup-id scrot -s
 
 # gaps
 gaps inner 6

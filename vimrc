@@ -45,6 +45,8 @@ Plugin 'scrooloose/nerdtree'
 " Icons
 Plugin 'ryanoasis/vim-devicons'
 
+Plugin 'baskerville/vim-sxhkdrc'
+
 call vundle#end()
 filetype plugin indent on
 " VundleEnd
