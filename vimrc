@@ -205,6 +205,10 @@ set clipboard^=unnamedplus,unnamed
 " command history
 set history=1000
 
+" delete without yank
+nnoremap x "_x
+vnoremap x "_x
+
 " autoclose
 inoremap " ""<left>
 inoremap "<BS> <left><right>
