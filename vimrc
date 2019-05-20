@@ -14,6 +14,9 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
+" Gruvbox
+Plugin 'morhetz/gruvbox'
+
 " Completion
 Plugin 'Valloric/YouCompleteMe'
 
