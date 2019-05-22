@@ -18,10 +18,12 @@ unsetopt autocd beep extendedglob
 bindkey -e
 
 # PATH
-export PATH=$HOME/bin:/usr/local/bin:/opt/cuda/bin:$(ruby -e 'puts Gem.user_dir')/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/opt/cuda/bin:$HOME/.gem/ruby/2.6.0/bin:$PATH
 
 # oh-my-zsh
 export ZSH="/home/jakub/.oh-my-zsh"
+
+export ZSH_DISABLE_COMPFIX='true'
 
 # theme
 
@@ -62,21 +64,10 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 
 ZSH_THEME=powerlevel10k/powerlevel10k
 
-# CASE_SENSITIVE="true"
-# HYPHEN_INSENSITIVE="true"
-# DISABLE_AUTO_UPDATE="true"
-# export UPDATE_ZSH_DAYS=13
-# DISABLE_LS_COLORS="true"
-# DISABLE_AUTO_TITLE="true"
-# ENABLE_CORRECTION="true"
-# COMPLETION_WAITING_DOTS="true"
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
 HIST_STAMPS="dd.mm.yyyy"
 
 # plugins
-plugins=(git colored-man-pages fzf heroku)
+plugins=(git colored-man-pages fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,9 +97,6 @@ export EDITOR=/usr/bin/vim
 export PAGER=/usr/bin/less
 export BROWSER=/usr/bin/google-chrome-stable
 export VISUAL=/usr/bin/vim
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
