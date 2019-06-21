@@ -5,36 +5,38 @@
 # /___|___/_| |_|_|  \___|
 #
 
-# history
+# History
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory nomatch notify
 
-# beep
+# Beep
 unsetopt autocd beep extendedglob
 
-# mode
+# Mode
 bindkey -e
 
 # PATH
-export PATH=$HOME/bin:/usr/local/bin:/opt/cuda/bin:$HOME/.gem/ruby/2.6.0/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/scripts/bin:$PATH
 
-# oh-my-zsh
+# Oh-my-zsh
 export ZSH="/home/jakub/.oh-my-zsh"
 
 export ZSH_DISABLE_COMPFIX='true'
 
-# theme
+# Theme
+# Suppress console warning
+POWERLEVEL9K_IGNORE_TERM_COLORS=true
 
-# font
+# Font
 POWERLEVEL9K_MODE='nerdfont-complete'
 
-# segments
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir vcs)
+# Segments
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir virtualenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(ssh background_jobs)
 
-# colors
+# Colors
 POWERLEVEL9K_USER_DEFAULT_BACKGROUND='002'
 POWERLEVEL9K_USER_DEFAULT_FOREGROUND='000'
 
@@ -54,11 +56,11 @@ POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND='000'
 POWERLEVEL9K_SSH_BACKGROUND='000'
 POWERLEVEL9K_SSH_FOREGROUND='003'
 
-# multiline
+# Multiline
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="└─>"
 
-# path truncate
+# Path truncate
 POWERLEVEL9K_SHORTEN_STRATEGY='truncate_from_right'
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 
@@ -66,14 +68,14 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 
 HIST_STAMPS="dd.mm.yyyy"
 
-# plugins
-plugins=(git colored-man-pages fzf)
+# Plugins
+plugins=(git colored-man-pages fzf virtualenv taskwarrior)
 
 source $ZSH/oh-my-zsh.sh
 
 export MANPATH="/usr/local/man:$MANPATH"
 
-# fzf
+# Fzf
 export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git --color=always"
 export FZF_CTRL_T_COMMAND="fd . -d 1 --follow --hidden --exclude .git --color=always ./"
 export FZF_DEFAULT_OPTS="--ansi \
@@ -98,10 +100,7 @@ export PAGER=/usr/bin/less
 export BROWSER=/usr/bin/google-chrome-stable
 export VISUAL=/usr/bin/vim
 
-# ssh
-export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# aliases
+# Aliases
 alias ls='ls -lh --color=auto'
 alias chrome='google-chrome-stable'
 alias cp='rsync -ah --info=progress2'
@@ -109,10 +108,7 @@ alias ytdl='youtube-dl'
 alias sudo='sudo '
 alias mp='ncmpcpp'
 alias clock='tty-clock -sc'
-alias ranger='ranger --choosedir=$HOME/.rangerdir; cd $(cat $HOME/.rangerdir)'
+alias ranger='ranger --choosedir=$HOME/.rangerdir; cd "$(cat $HOME/.rangerdir)"'
 alias r='ranger'
 alias v='vim'
 alias sc='systemctl'
-
-# travis gem
-[ -f /home/jakub/.travis/travis.sh ] && source /home/jakub/.travis/travis.sh
