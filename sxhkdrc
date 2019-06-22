@@ -1,40 +1,19 @@
-# Terminal, in place
-super + Return
-    ~/scripts/i3/terminal_in_place
-
-# Ss
-{_,shift +} Print
-    sleep 0.2; scrot "/tmp/ss-$(date +%F_%T).png" {_,-s} -e 'xclip -selection clipboard -t image/png < $f'
+# Dmenu launcher
+super + p
+	dmenu_run -i -p "Run: "
 
 # Browser
 super + b
     $BROWSER
 
-# Email
-super + m
-    thunderbird
+# Terminal in place
+super + Return
+    run_in_place st
 
 # Plumber
-super + p
-    ~/scripts/i3/plumber
+super + o
+    plumber
 
-# Dmenu launcher
-super + d
-    dmenu_run -i
-
-# Volume
-XF86Audio{Lower,Raise}Volume
-    ~/scripts/i3blocks/change_volume {-,+}
-
-# Speaker (un)mute
-XF86AudioMute
-    ~/scripts/i3blocks/volume_un_mute
-
-# Mic (un)mute
-XF86AudioMicMute
-    ~/scripts/i3blocks/microphone_un_mute
-
-# Brightness
-XF86MonBrightness{Down,Up}
-    ~/scripts/i3blocks/change_brightness {-,+}
-
+# SS
+{_,shift +} Print
+    sleep 0.2; scrot "/tmp/ss-$(date +%F_%T).png" {_,-s} -e 'xclip -selection clipboard -t image/png < $f'
