@@ -1,39 +1,39 @@
-#       _       _ _
-# __  _(_)_ __ (_) |_ _ __ ___
-# \ \/ / | '_ \| | __| '__/ __|
-#  >  <| | | | | | |_| | | (__
-# /_/\_\_|_| |_|_|\__|_|  \___|
-#
+# Monitor setup with 144hz
+xrandr --output DP-0 --mode 1920x1080 --rate 144 --output DVI-I-1 --mode 1920x1080 --rate 60 --right-of DP-0
 
-# nvidia config
-xrandr --setprovideroutputsource modesetting NVIDIA-0
-xrandr --auto
-xrandr --dpi 96
+# Mouse sensitivity
+xinput --set-prop 8 'Coordinate Transformation Matrix' 0.53 0 0 0 0.53 0 0 0 1
 
-# xresources
-[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+# Java apps fix
+export _JAVA_AWT_WM_NONREPARENTING=1
 
-# wallpaper setup
-~/.fehbg &
+# Compositor for opacity
+compton &
 
-# compositor for true transparency
-compton -b
-
-# notifications server
+# Notifications
 dunst &
 
-# hide cursor
-unclutter &
+# Wallpaper
+~/.fehbg &
 
-# restore sound config
-alsactl -f ~/.alsa_state restore &
-
-# polish keymap
-setxkbmap pl
-
-# key bindings
+# Keyboard binds
 sxhkd &
 
-# i3
-exec i3
+# Hide cursor
+unclutter &
 
+# Keymap
+setxkbmap pl
+
+# Music daemon
+mpd --kill
+mpd
+
+# Tmp bar
+while true; do
+    xsetroot -name " "
+    sleep 30s
+done &
+
+# Window manager
+exec dwm
