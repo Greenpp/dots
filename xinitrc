@@ -25,10 +25,6 @@ unclutter &
 # Keymap
 setxkbmap pl
 
-# Music daemon
-mpd --kill
-mpd
-
 # Tmp bar
 while true; do
     xsetroot -name " "
