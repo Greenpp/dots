@@ -25,6 +25,9 @@ unclutter &
 # Keymap
 setxkbmap pl
 
+# Numlock
+numlockx &
+
 # Tmp bar
 while true; do
     xsetroot -name " "
