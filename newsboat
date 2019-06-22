@@ -5,3 +5,6 @@ color listfocus_unread color11 color8 bold
 color info color4 color0 bold
 color background default default
 color article default default
+
+auto-reload yes
+reload-time 15
