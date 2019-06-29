@@ -28,11 +28,8 @@ setxkbmap pl
 # Numlock
 numlockx &
 
-# Tmp bar
-while true; do
-    xsetroot -name " "
-    sleep 30s
-done &
+# Bar
+dwmbar &
 
 # Window manager
 exec dwm
