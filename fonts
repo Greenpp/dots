@@ -13,17 +13,15 @@
 <alias>
     <family>serif</family>
     <prefer>
-        <family>DejaVu Serif</family>
-        <family>Noto Color Emoji</family>
-        <family>EmojiOne</family>
+        <family>Bitstream Vera Serif</family>
+        <family>JoyPixels</family>
     </prefer>
 </alias>
 <alias>
     <family>sans-serif</family>
     <prefer>
-        <family>DejaVu Sans</family>
-        <family>Noto Color Emoji</family>
-        <family>EmojiOne</family>
+        <family>Bitstream Vera Sans</family>
+        <family>JoyPixels</family>
     </prefer>
 </alias>
 
