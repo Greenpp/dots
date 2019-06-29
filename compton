@@ -89,3 +89,4 @@ wintypes:
 
 xrender-sync-fence = true;
 
+# vim:filetype=dosini
