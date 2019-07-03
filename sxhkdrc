@@ -17,3 +17,13 @@ super + o
 # SS
 {_,shift +} Print
     sleep 0.2; scrot "/tmp/ss-$(date +%F_%T).png" {_,-s} -e 'xclip -selection clipboard -t image/png < $f'
+
+# Volume
+super + {KP_Subtract,KP_Add}
+    amixer sset Master 1%{-,+} && updatebar
+
+super + shift + KP_Subtract
+    amixer sset Master toggle && updatebar
+
+super + shift + KP_Multiply
+    amixer sset Capture toggle && updatebar
