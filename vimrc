@@ -164,6 +164,8 @@ let g:gruvbox_contrast_dark='medium'
 " hi Normal guibg=NONE ctermbg=NONE
 
 " Startify
+let g:startify_fortune_use_unicode = 1
+let g:startify_bookmarks = [ '~/.vimrc', '~/.zshrc' ]
 augroup startify_clear
     autocmd!
     autocmd FileType startify :set nonumber
