@@ -69,7 +69,7 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 HIST_STAMPS="dd.mm.yyyy"
 
 # Plugins
-plugins=(git colored-man-pages fzf virtualenv taskwarrior)
+plugins=(git colored-man-pages fzf virtualenv taskwarrior dirpersist)
 
 source $ZSH/oh-my-zsh.sh
 
