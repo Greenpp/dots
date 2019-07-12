@@ -40,6 +40,20 @@ Plugin 'baskerville/vim-sxhkdrc'
 " Comments
 Plugin 'scrooloose/nerdcommenter'
 
+" CoC
+Plugin 'neoclide/coc.nvim'
+
+" Snippets
+Plugin 'honza/vim-snippets'
+
+" JS
+Plugin 'pangloss/vim-javascript'
+Plugin 'elzr/vim-json'
+Plugin 'mxw/vim-jsx'
+
+" FZF
+Plugin 'junegunn/fzf.vim'
+
 call vundle#end()
 filetype plugin indent on
 " VundleEnd
@@ -69,13 +83,22 @@ set undodir=~/.vim/undo
 set number relativenumber
 " Nonrelative numbers while typing commands
 nnoremap : :set number norelativenumber<CR>:
-autocmd CmdlineLeave * set number relativenumber
+augroup number_restore_set
+    autocmd!
+    autocmd Filetype * augroup number_restore
+    autocmd Filetype * autocmd!
+    autocmd Filetype * autocmd CmdlineLeave * set number relativenumber
+    autocmd Filetype * augroup END
+augroup END
 
 " Splits position
 set splitbelow
 set splitright
 " Resize splits after window resize
-autocmd VimResized * wincmd =
+augroup window_resize
+    autocmd!
+    autocmd VimResized * wincmd =
+augroup END
 
 " Indentation
 set autoindent
@@ -112,50 +135,67 @@ let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[2 q"
 let &t_EI = "\<Esc>[4 q"
 
-" Autoclose
-inoremap "" ""
-inoremap " ""<left>
-inoremap "<BS> <left><right>
-inoremap "<CR> "<CR>"<ESC>O
-inoremap '' ''
-inoremap ' ''<left>
-inoremap '<BS> <left><right>
-inoremap '<CR> '<CR>'<ESC>O
-inoremap """ """"""<left><left><left>
-inoremap """<CR> """<CR>"""<ESC>O
-inoremap () ()
-inoremap ( ()<left>
-inoremap (<BS> <left><right>
-inoremap (<CR> (<CR>)<ESC>O
-inoremap [] []
-inoremap [ []<left>
-inoremap [<BS> <left><right>
-inoremap [<CR> [<CR>]<ESC>O
-inoremap {} {}
-inoremap { {}<left>
-inoremap {<BS> <left><right>
-inoremap {<CR> {<CR>}<ESC>O
+" Split character
+set fillchars=vert:\│
 
 " Remove trailing whitespaces on save
-:autocmd BufWrite * :%s/\s\+$//e
+augroup whitespace_clear
+    autocmd!
+    autocmd BufWrite * :%s/\s\+$//e
+augroup END
 " Filetype text for empty files
-autocmd BufNewFile,BufRead * if matchstr(execute('set syntax?'), '=$') != '' | set filetype=text | endif
+augroup new_file_type
+    autocmd!
+    autocmd BufNewFile,BufRead * if matchstr(execute('set syntax?'), '=$') != '' | set filetype=text | endif
+augroup END
 " Spellcheck in git commits
-autocmd FileType gitcommit setlocal spell
+augroup git_spellcheck
+    autocmd!
+    autocmd FileType gitcommit setlocal spell
+augroup END
 
 
 " PLUGINS
+
+" Startify
+augroup startify_clear
+    autocmd!
+    autocmd FileType startify :set nonumber
+    autocmd FileType startify :nnoremap <buffer> : :
+    autocmd FileType startify :echom 'halo start'
+    autocmd FileType startify :augroup number_restore
+    autocmd FileType startify :autocmd!
+    autocmd FileType startify :augroup END
+augroup END
 
 " Nerdtree
 map <silent> <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeWinSize = 60
+let NERDTreeShowBookmarks = 1
+" Clear window
+augroup nerdtree_clear
+    autocmd!
+    autocmd FileType nerdtree :set signcolumn=no
+    autocmd FileType nerdtree :set nonumber
+    autocmd FileType nerdtree :nnoremap <buffer> : :
+    autocmd FileType nerdtree :augroup number_restore
+    autocmd FileType nerdtree :autocmd!
+    autocmd FileType nerdtree :augroup END
+augroup END
+" Colors
+highlight link NERDTreeDir GruvboxGreen
+highlight link NERDTreeDirSlash GruvboxGreen
 
 " Comments
 let g:NERDSpaceDelims=1
 let g:NERDDefaultAlign='left'
 nnoremap <silent> <C-_> :call NERDComment(0, "toggle")<CR>
 vnoremap <silent> <C-_> :call NERDComment(0, "toggle")<CR>
+
+" Fzf
+nnoremap ff :Files<CR>
+nnoremap fl :Lines<CR>
 
 " Spelling suggestions with fzf
 function! FzfSpellSink(word)
@@ -168,6 +208,9 @@ nnoremap <silent> z= :call fzf#run({'source': spellsuggest(expand('<cword>')),
 " Airline
 let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#coc#enabl = 1
+let g:airline#extensions#coc#error_symbol = 'E:'
+let g:airline#extensions#coc#warning_symbol = 'W:'
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -182,9 +225,51 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
+" CoC
+let g:coc_global_extensions = [
+    \'coc-python',
+    \'coc-tsserver',
+    \'coc-html',
+    \'coc-css',
+    \'coc-pairs',
+    \'coc-emmet',
+    \'coc-snippets',
+    \'coc-highlight',
+    \'coc-vimlsp',
+    \'coc-vimtex',
+    \'coc-sh',
+    \'coc-ccls',
+    \'coc-prettier'
+\]
+
+set hidden
+set updatetime=300
+set signcolumn=yes
+" TAB completion and navigation
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+" Confirm with enter
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" Snippets placeholders selection
+let g:coc_snippet_next = '<tab>'
+let g:coc_snippet_prev = '<s-tab>'
+" Formatting
+nnoremap <silent> <C-l> :call CocActionAsync('format')<CR>
+" Colors
+highlight link CocErrorSign GruvboxRed
+highlight link CocWarningSign GruvboxYellow
+highlight link CocInfoSign GruvboxBlue
+
 " Theme
 colo gruvbox
 set background=dark
 let g:gruvbox_contrast_dark='medium'
-hi Normal guibg=NONE ctermbg=NONE
-
+" hi Normal guibg=NONE ctermbg=NONE
