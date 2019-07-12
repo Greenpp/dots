@@ -46,10 +46,8 @@ Plugin 'junegunn/fzf.vim'
 " Git
 Plugin 'tpope/vim-fugitive'
 
-" JS
-Plugin 'pangloss/vim-javascript'
-Plugin 'elzr/vim-json'
-Plugin 'mxw/vim-jsx'
+" Syntax
+Plugin 'sheerun/vim-polyglot'
 
 " Sxhdk config syntax
 Plugin 'baskerville/vim-sxhkdrc'
@@ -98,6 +96,17 @@ set splitright
 augroup window_resize
     autocmd!
     autocmd VimResized * wincmd =
+augroup END
+
+" Help clear window
+augroup help_clear
+    autocmd!
+    autocmd FileType help :set signcolumn=no
+    autocmd FileType help :set nonumber
+    autocmd FileType help :nnoremap <buffer> : :
+    autocmd FileType help :augroup number_restore
+    autocmd FileType help :autocmd!
+    autocmd FileType help :augroup END
 augroup END
 
 " Indentation
@@ -168,9 +177,9 @@ let g:startify_fortune_use_unicode = 1
 let g:startify_bookmarks = [ '~/.vimrc', '~/.zshrc' ]
 augroup startify_clear
     autocmd!
+    autocmd FileType startify :set signcolumn=no
     autocmd FileType startify :set nonumber
     autocmd FileType startify :nnoremap <buffer> : :
-    autocmd FileType startify :echom 'halo start'
     autocmd FileType startify :augroup number_restore
     autocmd FileType startify :autocmd!
     autocmd FileType startify :augroup END
@@ -181,6 +190,10 @@ map <silent> <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeWinSize = 60
 let NERDTreeShowBookmarks = 1
+let g:NERDTreeDirArrowExpandable = '▶'
+let g:NERDTreeDirArrowCollapsible = '◢'
+let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
+let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
 " Clear window
 augroup nerdtree_clear
     autocmd!
@@ -195,6 +208,13 @@ augroup END
 highlight! link NERDTreeDir GruvboxBlue
 highlight! link NERDTreeDirSlash GruvboxFg1
 highlight! link NERDTreeFlags NERDTreeDir
+highlight! link NERDTreeOpenable NERDTreeDir
+highlight! link NERDTreeHelp GruvboxBg0
+highlight! link NERDTreeBookmarksHeader GruvboxYellow
+highlight! link NERDTreeCWD GruvboxYellow
+highlight! link NERDTreeBookmark GruvboxFg4
+highlight! link NERDTreeBookmarkName GruvboxFg1
+highlight! link NERDTreeLinkTarget GruvboxFg1
 
 " Comments
 let g:NERDSpaceDelims=1
