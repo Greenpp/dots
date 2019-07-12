@@ -18,24 +18,18 @@ Plugin 'VundleVim/Vundle.vim'
 " Gruvbox
 Plugin 'morhetz/gruvbox'
 
-" Start Page
-Plugin 'mhinz/vim-startify'
-
 " Bar
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-" Git
-Plugin 'tpope/vim-fugitive'
+" Start Page
+Plugin 'mhinz/vim-startify'
 
 " File explorer
 Plugin 'scrooloose/nerdtree'
 
 " Icons
 Plugin 'ryanoasis/vim-devicons'
-
-" Sxhdk config syntax
-Plugin 'baskerville/vim-sxhkdrc'
 
 " Comments
 Plugin 'scrooloose/nerdcommenter'
@@ -46,13 +40,19 @@ Plugin 'neoclide/coc.nvim'
 " Snippets
 Plugin 'honza/vim-snippets'
 
+" FZF
+Plugin 'junegunn/fzf.vim'
+
+" Git
+Plugin 'tpope/vim-fugitive'
+
 " JS
 Plugin 'pangloss/vim-javascript'
 Plugin 'elzr/vim-json'
 Plugin 'mxw/vim-jsx'
 
-" FZF
-Plugin 'junegunn/fzf.vim'
+" Sxhdk config syntax
+Plugin 'baskerville/vim-sxhkdrc'
 
 call vundle#end()
 filetype plugin indent on
@@ -157,6 +157,12 @@ augroup END
 
 " PLUGINS
 
+" Theme
+colo gruvbox
+set background=dark
+let g:gruvbox_contrast_dark='medium'
+" hi Normal guibg=NONE ctermbg=NONE
+
 " Startify
 augroup startify_clear
     autocmd!
@@ -184,8 +190,9 @@ augroup nerdtree_clear
     autocmd FileType nerdtree :augroup END
 augroup END
 " Colors
-highlight link NERDTreeDir GruvboxGreen
-highlight link NERDTreeDirSlash GruvboxGreen
+highlight! link NERDTreeDir GruvboxBlue
+highlight! link NERDTreeDirSlash GruvboxFg1
+highlight! link NERDTreeFlags NERDTreeDir
 
 " Comments
 let g:NERDSpaceDelims=1
@@ -264,12 +271,6 @@ let g:coc_snippet_prev = '<s-tab>'
 " Formatting
 nnoremap <silent> <C-l> :call CocActionAsync('format')<CR>
 " Colors
-highlight link CocErrorSign GruvboxRed
-highlight link CocWarningSign GruvboxYellow
-highlight link CocInfoSign GruvboxBlue
-
-" Theme
-colo gruvbox
-set background=dark
-let g:gruvbox_contrast_dark='medium'
-" hi Normal guibg=NONE ctermbg=NONE
+highlight! link CocErrorSign GruvboxRed
+highlight! link CocWarningSign GruvboxYellow
+highlight! link CocInfoSign GruvboxBlue
