@@ -45,6 +45,7 @@ Plugin 'junegunn/fzf.vim'
 
 " Git
 Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 
 " Syntax
 Plugin 'sheerun/vim-polyglot'
@@ -78,15 +79,38 @@ set undofile
 set undodir=~/.vim/undo
 
 " Lines numeration
-set number relativenumber
 " Nonrelative numbers while typing commands
-nnoremap : :set number norelativenumber<CR>:
-augroup number_restore_set
+function SetNumSign()
+    let cleanFt = ['startify', 'nerdtree', 'help']
+    let noNumFt = ['vundle']
+
+    if index(cleanFt, &filetype) >= 0
+        set signcolumn=no
+        set nonumber
+        nnoremap : :
+        augroup number_restore
+            autocmd!
+        augroup END
+    elseif index(noNumFt, &filetype) >= 0
+        set signcolumn=yes
+        set nonumber
+        nnoremap : :
+        augroup number_restore
+            autocmd!
+        augroup END
+    else
+        set signcolumn=yes
+        set number relativenumber
+        nnoremap : :set number norelativenumber<CR>:
+        augroup number_restore
+            autocmd!
+            autocmd CmdlineLeave * set number relativenumber
+        augroup END
+    endif
+endfunction
+augroup clear_
     autocmd!
-    autocmd Filetype * augroup number_restore
-    autocmd Filetype * autocmd!
-    autocmd Filetype * autocmd CmdlineLeave * set number relativenumber
-    autocmd Filetype * augroup END
+    autocmd Filetype * :call SetNumSign()
 augroup END
 
 " Splits position
@@ -96,17 +120,6 @@ set splitright
 augroup window_resize
     autocmd!
     autocmd VimResized * wincmd =
-augroup END
-
-" Help clear window
-augroup help_clear
-    autocmd!
-    autocmd FileType help :set signcolumn=no
-    autocmd FileType help :set nonumber
-    autocmd FileType help :nnoremap <buffer> : :
-    autocmd FileType help :augroup number_restore
-    autocmd FileType help :autocmd!
-    autocmd FileType help :augroup END
 augroup END
 
 " Indentation
@@ -175,15 +188,6 @@ let g:gruvbox_contrast_dark='medium'
 " Startify
 let g:startify_fortune_use_unicode = 1
 let g:startify_bookmarks = [ '~/.vimrc', '~/.zshrc' ]
-augroup startify_clear
-    autocmd!
-    autocmd FileType startify :set signcolumn=no
-    autocmd FileType startify :set nonumber
-    autocmd FileType startify :nnoremap <buffer> : :
-    autocmd FileType startify :augroup number_restore
-    autocmd FileType startify :autocmd!
-    autocmd FileType startify :augroup END
-augroup END
 
 " Nerdtree
 map <silent> <C-n> :NERDTreeToggle<CR>
@@ -194,16 +198,6 @@ let g:NERDTreeDirArrowExpandable = '▶'
 let g:NERDTreeDirArrowCollapsible = '◢'
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
 let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
-" Clear window
-augroup nerdtree_clear
-    autocmd!
-    autocmd FileType nerdtree :set signcolumn=no
-    autocmd FileType nerdtree :set nonumber
-    autocmd FileType nerdtree :nnoremap <buffer> : :
-    autocmd FileType nerdtree :augroup number_restore
-    autocmd FileType nerdtree :autocmd!
-    autocmd FileType nerdtree :augroup END
-augroup END
 " Colors
 highlight! link NERDTreeDir GruvboxBlue
 highlight! link NERDTreeDirSlash GruvboxFg1
@@ -273,7 +267,6 @@ let g:coc_global_extensions = [
 
 set hidden
 set updatetime=300
-set signcolumn=yes
 " TAB completion and navigation
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
