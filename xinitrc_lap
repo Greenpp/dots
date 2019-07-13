@@ -4,7 +4,7 @@ xrandr --auto
 xrandr --dpi 96
 
 # Touchpad tapping
-xinput set-props 11 331 1
+xinput set-prop 11 331 1
 
 # Java apps fix
 export _JAVA_AWT_WM_NONREPARENTING=1
