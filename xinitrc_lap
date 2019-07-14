@@ -1,0 +1,37 @@
+# Monitor setup with 144hz
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
+xrandr --dpi 96
+
+# Touchpad tapping
+xinput set-prop 11 331 1
+
+# Java apps fix
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+# Compositor for opacity
+compton &
+
+# Notifications
+dunst &
+
+# Wallpaper
+~/.fehbg &
+
+# Keyboard binds
+sxhkd &
+
+# Hide cursor
+unclutter &
+
+# Keymap
+setxkbmap pl
+
+# Numlock
+numlockx &
+
+# Bar
+dwmbar &
+
+# Window manager
+exec dwm
