@@ -260,8 +260,6 @@ let g:coc_global_extensions = [
     \'coc-highlight',
     \'coc-vimlsp',
     \'coc-vimtex',
-    \'coc-sh',
-    \'coc-ccls',
     \'coc-prettier',
     \'coc-tslint-plugin',
     \'coc-ultisnips',
