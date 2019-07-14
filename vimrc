@@ -187,7 +187,7 @@ let g:gruvbox_contrast_dark='medium'
 
 " Startify
 let g:startify_fortune_use_unicode = 1
-let g:startify_bookmarks = [ '~/.vimrc', '~/.zshrc' ]
+let g:startify_bookmarks = [ '~/dots/vimrc', '~/dots/zshrc' ]
 
 " Nerdtree
 map <silent> <C-n> :NERDTreeToggle<CR>
