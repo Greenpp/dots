@@ -95,10 +95,10 @@ spinner:3,\
 header:-1"
 
 # Defaults
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/bin/nvim
 export PAGER=/usr/bin/less
 export BROWSER=/usr/bin/google-chrome-stable
-export VISUAL=/usr/bin/vim
+export VISUAL=/usr/bin/nvim
 
 # Aliases
 alias ls='ls -lh --color=auto'
@@ -110,5 +110,5 @@ alias mp='ncmpcpp'
 alias clock='tty-clock -sc'
 alias ranger='ranger --choosedir=$HOME/.rangerdir; cd "$(cat $HOME/.rangerdir)"'
 alias r='ranger'
-alias v='vim'
+alias v='nvim'
 alias sc='systemctl'

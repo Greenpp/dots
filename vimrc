@@ -7,55 +7,49 @@
 
 set encoding=utf-8
 
-" Vundle
-set nocompatible
-filetype off
-set runtimepath+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin()
 
-Plugin 'VundleVim/Vundle.vim'
+Plug 'junegunn/vim-plug'
 
 " Gruvbox
-Plugin 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 
 " Bar
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Start Page
-Plugin 'mhinz/vim-startify'
+Plug 'mhinz/vim-startify'
 
 " File explorer
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 
 " Icons
-Plugin 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 
 " Comments
-Plugin 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 
 " CoC
-Plugin 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Snippets
-Plugin 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 
 " FZF
-Plugin 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim'
 
 " Git
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " Syntax
-Plugin 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot'
 
 " Sxhdk config syntax
-Plugin 'baskerville/vim-sxhkdrc'
+Plug 'baskerville/vim-sxhkdrc'
 
-call vundle#end()
-filetype plugin indent on
-" VundleEnd
+call plug#end()
 
 " VANILLA
 
@@ -219,14 +213,6 @@ vnoremap <silent> <C-_> :call NERDComment(0, "toggle")<CR>
 " Fzf
 nnoremap ff :Files<CR>
 nnoremap fl :Lines<CR>
-
-" Spelling suggestions with fzf
-function! FzfSpellSink(word)
-    exe 'normal! "_ciw'.a:word
-endfunction
-nnoremap <silent> z= :call fzf#run({'source': spellsuggest(expand('<cword>')),
-                                   \'sink': function('FzfSpellSink'),
-                                   \'right': '25%'})<CR>
 
 " Airline
 let g:airline_theme='gruvbox'
