@@ -149,6 +149,7 @@ vnoremap x "_x
 " Cursor
 let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[2 q"
+set guicursor=n-v-c-sm:hor20,i-ci-ve:ver25,r-cr-o:block
 let &t_EI = "\<Esc>[4 q"
 
 " Split character
@@ -172,6 +173,9 @@ augroup END
 
 
 " PLUGINS
+" Terminal
+nnoremap <C-q> :split <Bar> resize 20 <Bar> terminal<CR>i
+
 
 " Theme
 colo gruvbox
