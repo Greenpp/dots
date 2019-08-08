@@ -41,7 +41,6 @@ Plug 'junegunn/fzf.vim'
 
 " Git
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
 
 " Syntax
 Plug 'sheerun/vim-polyglot'
@@ -70,7 +69,7 @@ set clipboard^=unnamedplus,unnamed
 
 " Undo between sessions
 set undofile
-set undodir=~/.vim/undo
+set undodir=~/.config/nvim/undo
 
 " Lines numeration
 " Nonrelative numbers while typing commands
@@ -149,11 +148,14 @@ vnoremap x "_x
 " Cursor
 let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[2 q"
-set guicursor=n-v-c-sm:hor20,i-ci-ve:ver25,r-cr-o:block
 let &t_EI = "\<Esc>[4 q"
+set guicursor=n-v-c-sm:hor20,i-ci-ve:ver25,r-cr-o:block
 
 " Split character
 set fillchars=vert:\│
+
+" Split
+nnoremap <C-s> :vsplit<CR>:Startify<CR>
 
 " Remove trailing whitespaces on save
 augroup whitespace_clear
@@ -171,11 +173,11 @@ augroup git_spellcheck
     autocmd FileType gitcommit setlocal spell
 augroup END
 
-
-" PLUGINS
 " Terminal
 nnoremap <C-q> :split <Bar> resize 20 <Bar> terminal<CR>i
 
+
+" PLUGINS
 
 " Theme
 colo gruvbox
@@ -253,7 +255,8 @@ let g:coc_global_extensions = [
     \'coc-prettier',
     \'coc-tslint-plugin',
     \'coc-ultisnips',
-    \'coc-neosnippet'
+    \'coc-neosnippet',
+    \'coc-git'
 \]
 
 set hidden
