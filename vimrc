@@ -75,7 +75,7 @@ set undodir=~/.config/nvim/undo
 " Nonrelative numbers while typing commands
 function SetNumSign()
     let cleanFt = ['startify', 'nerdtree', 'help']
-    let noNumFt = ['vundle']
+    let noNumFt = ['vim-plug']
 
     if index(cleanFt, &filetype) >= 0
         set signcolumn=no
@@ -155,7 +155,7 @@ set guicursor=n-v-c-sm:hor20,i-ci-ve:ver25,r-cr-o:block
 set fillchars=vert:\│
 
 " Split
-nnoremap <C-s> :vsplit<CR>:Startify<CR>
+nnoremap <silent> <C-s> :vsplit<CR>:Startify<CR>
 
 " Remove trailing whitespaces on save
 augroup whitespace_clear
@@ -174,7 +174,7 @@ augroup git_spellcheck
 augroup END
 
 " Terminal
-nnoremap <C-q> :split <Bar> resize 20 <Bar> terminal<CR>i
+nnoremap <silent> <C-q> :split <Bar> resize 20 <Bar> terminal<CR>i
 
 
 " PLUGINS
