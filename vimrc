@@ -61,7 +61,7 @@ set history=1000
 filetype plugin on
 
 " Command completion
-set wildmode=longest,full
+set wildmode=longest:full,full
 set wildmenu
 
 " Copy to clipboard and primary
@@ -246,17 +246,16 @@ let g:coc_global_extensions = [
     \'coc-tsserver',
     \'coc-html',
     \'coc-css',
-    \'coc-pairs',
-    \'coc-emmet',
-    \'coc-snippets',
-    \'coc-highlight',
     \'coc-vimlsp',
     \'coc-vimtex',
+    \'coc-pairs',
+    \'coc-git',
     \'coc-prettier',
     \'coc-tslint-plugin',
-    \'coc-ultisnips',
-    \'coc-neosnippet',
-    \'coc-git'
+    \'coc-highlight',
+    \'coc-emmet',
+    \'coc-snippets',
+    \'coc-syntax',
 \]
 
 set hidden
