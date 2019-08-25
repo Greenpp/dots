@@ -1,0 +1,49 @@
+{
+  "git.removedSign.text": "-",
+  "git.topRemovedSign.text": "-",
+  "coc.preferences.colorSupport": true,
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "suggest.snippetIndicator": "",
+  "python.venvFolders": [".venvs"],
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.banditEnabled": true,
+  "python.linting.pylamaEnabled": true,
+  "python.autoComplete.addBrackets": true,
+  "python.formatting.provider": "black",
+  "emmet.includeLanguages": {
+    "javascript": "html",
+    "javascriptreact": "javascript"
+  },
+  "snippets.extends": {
+    "cpp": ["c"],
+    "javascript": ["html"],
+    "javascriptreact": ["javascript"],
+    "typescript": ["javascript"]
+  },
+  "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cpp", "objc", "objcpp"],
+      "rootPatterns": [
+        ".ccls",
+        "compile_commands.json",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        }
+      }
+    },
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
+    }
+  }
+}
