@@ -12,6 +12,7 @@
   "python.linting.pylamaEnabled": true,
   "python.autoComplete.addBrackets": true,
   "python.formatting.provider": "black",
+  "python.workspaceSymbols.tagFilePath": "${workspaceFolder}/tags",
   "emmet.includeLanguages": {
     "javascript": "html",
     "javascriptreact": "javascript"
