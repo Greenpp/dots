@@ -244,6 +244,7 @@ let g:airline_symbols.linenr = ''
 let g:coc_global_extensions = [
     \'coc-python',
     \'coc-tsserver',
+    \'coc-json',
     \'coc-html',
     \'coc-css',
     \'coc-vimlsp',
@@ -256,6 +257,7 @@ let g:coc_global_extensions = [
     \'coc-emmet',
     \'coc-snippets',
     \'coc-syntax',
+    \'coc-dictionary',
 \]
 
 set hidden
