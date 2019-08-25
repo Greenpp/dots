@@ -135,7 +135,7 @@ set hlsearch
 " Search while typing
 set incsearch
 " Highlight reset
-nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+nnoremap <silent> <Space><Space> :nohlsearch<Bar>:echo<CR>
 " Search for word under cursor with #
 nnoremap # mp*`p<Bar>:echo<CR>
 " Search for selection with #
@@ -258,6 +258,7 @@ let g:coc_global_extensions = [
     \'coc-snippets',
     \'coc-syntax',
     \'coc-dictionary',
+    \'coc-lists',
 \]
 
 set hidden
@@ -284,3 +285,7 @@ nnoremap <silent> <C-l> :call CocActionAsync('format')<CR>
 highlight! link CocErrorSign GruvboxRed
 highlight! link CocWarningSign GruvboxYellow
 highlight! link CocInfoSign GruvboxBlue
+" Lists
+nnoremap <silent> <Space>t :<C-u>CocList tags<CR>
+nnoremap <silent> <Space>c :<C-u>CocList commands<CR>
+nnoremap <silent> <Space>f :<C-u>CocList files<CR>
