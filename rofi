@@ -3,6 +3,12 @@ configuration {
 	modi: "run,drun,ssh";
 	show-icons: true;
 	theme: "gruvbox-dark";
+	matching: "fuzzy";
+	sort: true;
+	sorting-method: "fzf";
+	icon-theme: "Papirus";
+	parse-hosts: true;
+	parse-known-hosts: false;
 /*	width: 50;*/
 /*	lines: 15;*/
 /*	columns: 1;*/
@@ -20,23 +26,17 @@ configuration {
 /*	run-shell-command: "{terminal} -e {cmd}";*/
 /*	window-command: "wmctrl -i -R {window}";*/
 /*	window-match-fields: "all";*/
-/*	icon-theme: ;*/
 /*	drun-match-fields: "name,generic,exec,categories";*/
 /*	drun-show-actions: false;*/
 /*	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";*/
 /*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
-/*	sort: false;*/
-/*	sorting-method: ;*/
 /*	case-sensitive: false;*/
 /*	cycle: true;*/
 /*	sidebar-mode: false;*/
 /*	eh: 1;*/
 /*	auto-select: false;*/
-/*	parse-hosts: false;*/
-/*	parse-known-hosts: true;*/
 /*	combi-modi: "window,run";*/
-/*	matching: "normal";*/
 /*	tokenize: true;*/
 /*	m: "-5";*/
 /*	line-margin: 2;*/
