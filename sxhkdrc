@@ -16,7 +16,7 @@ super + o
 
 # SS
 {_,shift +} Print
-    sleep 0.2; scrot "/tmp/ss-$(date +%F_%T).png" {_,-s} -e 'xclip -selection clipboard -t image/png < $f'
+    maim -u {_,-s} | xclip -selection clipboard -t image/png
 
 # Volume
 super + {KP_Subtract,KP_Add}
