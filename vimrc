@@ -134,6 +134,8 @@ nnoremap <Down> gj
 set hlsearch
 " Search while typing
 set incsearch
+" Highlight for substitution
+set inccommand=nosplit
 " Highlight reset
 nnoremap <silent> <Space><Space> :nohlsearch<Bar>:echo<CR>
 " Search for word under cursor with #
@@ -289,3 +291,4 @@ highlight! link CocInfoSign GruvboxBlue
 nnoremap <silent> <Space>t :<C-u>CocList tags<CR>
 nnoremap <silent> <Space>c :<C-u>CocList commands<CR>
 nnoremap <silent> <Space>f :<C-u>CocList files<CR>
+nnoremap <silent> <Space>b :<C-u>CocList buffers<CR>
