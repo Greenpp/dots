@@ -1,6 +1,6 @@
 configuration {
 	font: "mono 15";
-	modi: "run,drun,ssh";
+	modi: "combi,ssh";
 	show-icons: true;
 	matching: "fuzzy";
 	sort: true;
@@ -14,6 +14,9 @@ configuration {
 	case-sensitive: false;
 	sidebar-mode: true;
 	display-run: "Run";
+	combi-hide-mode-prefix: true;
+	combi-modi: "drun,run";
+	display-combi: "Run";
 /*	width: 50;*/
 /*	columns: 1;*/
 /*	bw: 1;*/
@@ -37,7 +40,6 @@ configuration {
 /*	ignored-prefixes: "";*/
 /*	eh: 1;*/
 /*	auto-select: false;*/
-/*	combi-modi: "window,run";*/
 /*	tokenize: true;*/
 /*	m: "-5";*/
 /*	line-margin: 2;*/
@@ -59,14 +61,12 @@ configuration {
 /*	color-active: ;*/
 /*	color-window: ;*/
 /*	max-history-size: 25;*/
-/*	combi-hide-mode-prefix: false;*/
 /*	cache-dir: ;*/
 /*	pid: "/run/user/1000/rofi.pid";*/
 /*	display-window: ;*/
 /*	display-windowcd: ;*/
 /*	display-ssh: ;*/
 /*	display-drun: ;*/
-/*	display-combi: ;*/
 /*	display-keys: ;*/
 /*	kb-primary-paste: "Control+V,Shift+Insert";*/
 /*	kb-secondary-paste: "Control+v,Insert";*/
