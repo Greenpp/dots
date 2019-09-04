@@ -44,9 +44,8 @@ Plug 'tpope/vim-fugitive'
 
 " Syntax
 Plug 'sheerun/vim-polyglot'
-
-" Sxhdk config syntax
 Plug 'baskerville/vim-sxhkdrc'
+Plug 'chunkhang/vim-mbsync'
 
 call plug#end()
 
