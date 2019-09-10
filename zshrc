@@ -24,6 +24,7 @@ export PATH=$HOME/bin:/usr/local/bin:$HOME/scripts/bin:$PATH
 export ZSH="/home/jakub/.oh-my-zsh"
 
 export ZSH_DISABLE_COMPFIX='true'
+DISABLE_AUTO_UPDATE=true
 
 # Theme
 # Suppress console warning
