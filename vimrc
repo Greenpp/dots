@@ -131,6 +131,8 @@ nnoremap <Down> gj
 
 " Matching search highlight
 set hlsearch
+" Ignore case for only lower-case searches
+set smartcase
 " Search while typing
 set incsearch
 " Highlight for substitution
