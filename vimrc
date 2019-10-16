@@ -22,7 +22,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
 
 " File explorer
-Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
 
 " Icons
 Plug 'ryanoasis/vim-devicons'
@@ -147,6 +147,8 @@ vnoremap # ymp/\V<C-r>=escape(@",'/\')<CR><CR>`p<Bar>:echo<CR>
 " delete without yank
 nnoremap x "_x
 vnoremap x "_x
+" paste without yank in visual
+vnoremap p "_xp
 
 " Cursor
 let &t_SI = "\<Esc>[6 q"
@@ -192,26 +194,29 @@ let g:gruvbox_contrast_dark='medium'
 let g:startify_fortune_use_unicode = 1
 let g:startify_bookmarks = [ '~/dots/vimrc', '~/dots/zshrc' ]
 
-" Nerdtree
-map <silent> <C-n> :NERDTreeToggle<CR>
-let g:NERDTreeQuitOnOpen = 1
-let g:NERDTreeWinSize = 60
-let NERDTreeShowBookmarks = 1
-let g:NERDTreeDirArrowExpandable = '▶'
-let g:NERDTreeDirArrowCollapsible = '◢'
-let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
-let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
-" Colors
-highlight! link NERDTreeDir GruvboxBlue
-highlight! link NERDTreeDirSlash GruvboxFg1
-highlight! link NERDTreeFlags NERDTreeDir
-highlight! link NERDTreeOpenable NERDTreeDir
-highlight! link NERDTreeHelp GruvboxBg0
-highlight! link NERDTreeBookmarksHeader GruvboxYellow
-highlight! link NERDTreeCWD GruvboxYellow
-highlight! link NERDTreeBookmark GruvboxFg4
-highlight! link NERDTreeBookmarkName GruvboxFg1
-highlight! link NERDTreeLinkTarget GruvboxFg1
+"" Nerdtree
+" map <silent> <C-n> :NERDTreeToggle<CR>
+" let g:NERDTreeQuitOnOpen = 1
+" let g:NERDTreeWinSize = 60
+" let NERDTreeShowBookmarks = 1
+" let g:NERDTreeDirArrowExpandable = '▶'
+" let g:NERDTreeDirArrowCollapsible = '◢'
+" let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
+" let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
+"" Colors
+" highlight! link NERDTreeDir GruvboxBlue
+" highlight! link NERDTreeDirSlash GruvboxFg1
+" highlight! link NERDTreeFlags NERDTreeDir
+" highlight! link NERDTreeOpenable NERDTreeDir
+" highlight! link NERDTreeHelp GruvboxBg0
+" highlight! link NERDTreeBookmarksHeader GruvboxYellow
+" highlight! link NERDTreeCWD GruvboxYellow
+" highlight! link NERDTreeBookmark GruvboxFg4
+" highlight! link NERDTreeBookmarkName GruvboxFg1
+" highlight! link NERDTreeLinkTarget GruvboxFg1
+
+" Coc-explorer
+nnoremap <silent> <C-n> :CocCommand explorer<CR>
 
 " Comments
 let g:NERDSpaceDelims=1
@@ -250,8 +255,9 @@ let g:coc_global_extensions = [
     \'coc-json',
     \'coc-html',
     \'coc-css',
+    \'coc-sql',
     \'coc-vimlsp',
-    \'coc-vimtex',
+    \'coc-texlab',
     \'coc-pairs',
     \'coc-git',
     \'coc-prettier',
@@ -262,6 +268,7 @@ let g:coc_global_extensions = [
     \'coc-syntax',
     \'coc-dictionary',
     \'coc-lists',
+    \'coc-explorer',
 \]
 
 set hidden
