@@ -69,8 +69,11 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 
 HIST_STAMPS="dd.mm.yyyy"
 
+# Tmux
+ZSH_TMUX_AUTOSTART=true
+
 # Plugins
-plugins=(git colored-man-pages fzf virtualenv taskwarrior dirpersist django)
+plugins=(git colored-man-pages fzf virtualenv taskwarrior dirpersist django tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -112,10 +115,5 @@ alias clock='tty-clock -sc'
 alias ranger='ranger --choosedir=$HOME/.rangerdir; cd "$(cat $HOME/.rangerdir)"'
 alias r='ranger'
 alias v='nvim'
+alias sv='sudo -E nvim'
 alias sc='systemctl'
-alias pm='python-manager'
-
-if [[ -v CUSTOM_STARTUP_COMMAND ]]; then
-    eval ${CUSTOM_STARTUP_COMMAND}
-    unset CUSTOM_STARTUP_COMMAND
-fi
