@@ -2,7 +2,7 @@
 set -sg escape-time 1
 set -g base-index 1
 setw -g pane-base-index 1
-set -ga terminal-overrides '*:Ss=\E[%p1%d q:Se=\E[ q'
+set -ga terminal-overrides '*:Ss=\E[%p1%d q:Se=\E[3 q'
 
 # Split
 bind s split-window -h -c '#{pane_current_path}'
