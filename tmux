@@ -28,12 +28,13 @@ bind -n S-M-Right next-window
 set -g mouse on
 
 # Dont rename window after command execution
-set-option -g allow-rename off
+set-option -g automatic-rename off
 
 ##############################
 ## COLORSCHEME: gruvbox dark##
 ##############################
 set-option -g status "on"
+set-option -g status-position top
 
 # default statusbar color
 set-option -g status-style bg=colour237,fg=colour223 # bg=bg1, fg=fg1
