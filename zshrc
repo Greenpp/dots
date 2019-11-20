@@ -69,9 +69,6 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 
 HIST_STAMPS="dd.mm.yyyy"
 
-# Tmux
-ZSH_TMUX_AUTOSTART=true
-
 # Plugins
 plugins=(git colored-man-pages fzf virtualenv taskwarrior dirpersist django tmux)
 
