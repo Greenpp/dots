@@ -47,6 +47,9 @@ Plug 'sheerun/vim-polyglot'
 Plug 'baskerville/vim-sxhkdrc'
 Plug 'chunkhang/vim-mbsync'
 
+" Grammar
+Plug 'rhysd/vim-grammarous'
+
 call plug#end()
 
 " VANILLA
@@ -300,3 +303,4 @@ nnoremap <silent> <Space>t :<C-u>CocList tags<CR>
 nnoremap <silent> <Space>c :<C-u>CocList commands<CR>
 nnoremap <silent> <Space>f :<C-u>CocList files<CR>
 nnoremap <silent> <Space>b :<C-u>CocList buffers<CR>
+nnoremap <silent> <Space>l :<C-u>CocList<CR>
