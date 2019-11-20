@@ -1,5 +1,6 @@
 {
   "explorer.icon.enableNerdfont": true,
+  "python.jediEnabled": false,
   "explorer.width": 60,
   "explorer.file.columns": [
       "git",
@@ -34,7 +35,6 @@
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
   "python.linting.banditEnabled": true,
-  "python.linting.pylamaEnabled": true,
   "python.autoComplete.addBrackets": true,
   "python.formatting.provider": "black",
   "python.workspaceSymbols.tagFilePath": "${workspaceFolder}/tags",
