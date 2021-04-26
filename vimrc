@@ -14,47 +14,33 @@ if !exists('g:vscode')
 
     " Gruvbox
     Plug 'morhetz/gruvbox'
-
+    " Icons
+    Plug 'ryanoasis/vim-devicons'
     " Bar
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-
     " Start Page
     Plug 'mhinz/vim-startify'
 
-    " File explorer
-    " Plug 'scrooloose/nerdtree'
-
-    " Icons
-    Plug 'ryanoasis/vim-devicons'
-
-    " Comments
-    Plug 'scrooloose/nerdcommenter'
-
-    " CoC
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-    " Snippets
-    Plug 'honza/vim-snippets'
-
-    " FZF
-    Plug 'junegunn/fzf.vim'
-
-    " Git
-    Plug 'tpope/vim-fugitive'
-
     " Syntax
     Plug 'sheerun/vim-polyglot'
-    Plug 'baskerville/vim-sxhkdrc'
-    Plug 'chunkhang/vim-mbsync'
-
-    " Grammar
-    Plug 'rhysd/vim-grammarous'
+    " Comments
+    Plug 'scrooloose/nerdcommenter'
+    " CoC
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Snippets
+    Plug 'honza/vim-snippets'
+    " Git
+    Plug 'tpope/vim-fugitive'
+    " FZF
+    Plug 'junegunn/fzf.vim'
+    " Easymotion
+    Plug 'easymotion/vim-easymotion', {'as': 'native-easymotion'}
 
     call plug#end()
 
     " VANILLA
-
+    "
     syntax on
     filetype on
     set linebreak
@@ -198,27 +184,6 @@ if !exists('g:vscode')
     let g:startify_fortune_use_unicode = 1
     let g:startify_bookmarks = [ '~/dots/vimrc', '~/dots/zshrc' ]
 
-    "" Nerdtree
-    " map <silent> <C-n> :NERDTreeToggle<CR>
-    " let g:NERDTreeQuitOnOpen = 1
-    " let g:NERDTreeWinSize = 60
-    " let NERDTreeShowBookmarks = 1
-    " let g:NERDTreeDirArrowExpandable = '▶'
-    " let g:NERDTreeDirArrowCollapsible = '◢'
-    " let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
-    " let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
-    "" Colors
-    " highlight! link NERDTreeDir GruvboxBlue
-    " highlight! link NERDTreeDirSlash GruvboxFg1
-    " highlight! link NERDTreeFlags NERDTreeDir
-    " highlight! link NERDTreeOpenable NERDTreeDir
-    " highlight! link NERDTreeHelp GruvboxBg0
-    " highlight! link NERDTreeBookmarksHeader GruvboxYellow
-    " highlight! link NERDTreeCWD GruvboxYellow
-    " highlight! link NERDTreeBookmark GruvboxFg4
-    " highlight! link NERDTreeBookmarkName GruvboxFg1
-    " highlight! link NERDTreeLinkTarget GruvboxFg1
-
     " Coc-explorer
     nnoremap <silent> <C-n> :CocCommand explorer<CR>
 
@@ -305,4 +270,17 @@ if !exists('g:vscode')
     nnoremap <silent> <Space>f :<C-u>CocList files<CR>
     nnoremap <silent> <Space>b :<C-u>CocList buffers<CR>
     nnoremap <silent> <Space>l :<C-u>CocList<CR>
+else
+    set encoding=utf-8
+
+    call plug#begin()
+
+    Plug 'junegunn/vim-plug'
+
+    " Easymotion
+    Plug 'asvetliakov/vim-easymotion'
+
+    call plug#end()
+    set clipboard^=unnamedplus,unnamed
+    set smartcase
 endif
